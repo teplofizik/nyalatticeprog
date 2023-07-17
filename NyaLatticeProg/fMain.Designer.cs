@@ -37,11 +37,8 @@
             this.lStatus = new System.Windows.Forms.Label();
             this.tTimer = new System.Windows.Forms.Timer(this.components);
             this.dlgOpen = new System.Windows.Forms.OpenFileDialog();
-            this.bTest = new System.Windows.Forms.Button();
             this.pbStatus = new System.Windows.Forms.PictureBox();
-            this.tbValue = new System.Windows.Forms.TrackBar();
             ((System.ComponentModel.ISupportInitialize)(this.pbStatus)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbValue)).BeginInit();
             this.SuspendLayout();
             // 
             // bCancel
@@ -108,16 +105,6 @@
             this.dlgOpen.Filter = "Binary (*.bin)|*bin|All files (*.*)|*.*";
             this.dlgOpen.Title = "Open lattice bitmap...";
             // 
-            // bTest
-            // 
-            this.bTest.Location = new System.Drawing.Point(34, 96);
-            this.bTest.Name = "bTest";
-            this.bTest.Size = new System.Drawing.Size(75, 23);
-            this.bTest.TabIndex = 6;
-            this.bTest.Text = "Test";
-            this.bTest.UseVisualStyleBackColor = true;
-            this.bTest.Click += new System.EventHandler(this.bTest_Click);
-            // 
             // pbStatus
             // 
             this.pbStatus.Location = new System.Drawing.Point(12, 98);
@@ -126,22 +113,12 @@
             this.pbStatus.TabIndex = 7;
             this.pbStatus.TabStop = false;
             // 
-            // tbValue
-            // 
-            this.tbValue.Location = new System.Drawing.Point(115, 98);
-            this.tbValue.Maximum = 255;
-            this.tbValue.Name = "tbValue";
-            this.tbValue.Size = new System.Drawing.Size(188, 45);
-            this.tbValue.TabIndex = 8;
-            // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(477, 125);
-            this.Controls.Add(this.tbValue);
             this.Controls.Add(this.pbStatus);
-            this.Controls.Add(this.bTest);
             this.Controls.Add(this.lStatus);
             this.Controls.Add(this.bLoad);
             this.Controls.Add(this.tFilename);
@@ -154,7 +131,6 @@
             this.Text = "Lattice iCE5LP programmer";
             this.Load += new System.EventHandler(this.fMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbStatus)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbValue)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,9 +146,7 @@
         private System.Windows.Forms.Label lStatus;
         private System.Windows.Forms.Timer tTimer;
         private System.Windows.Forms.OpenFileDialog dlgOpen;
-        private System.Windows.Forms.Button bTest;
         private System.Windows.Forms.PictureBox pbStatus;
-        private System.Windows.Forms.TrackBar tbValue;
     }
 }
 

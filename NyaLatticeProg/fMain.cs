@@ -42,11 +42,6 @@ namespace LatticeProg
 
         private void fMain_Load(object sender, EventArgs e)
         {
-            //tFilename.Text = "C:\\Users\\Alex\\Documents\\Lattice\\fpgadimmer6\\pwm_test\\pwm_test_Implmnt\\sbt\\outputs\\bitmap\\test_bitmap.bin";
-            //tFilename.Text = "C:\\Users\\Alex\\Documents\\Lattice\\test\\blinker\\blinker_Implmnt\\sbt\\outputs\\bitmap\\test_bitmap.bin";
-            //tFilename.Text = "C:\\Users\\Alex\\Documents\\Lattice\\test\\ledex\\ledex_Implmnt\\sbt\\outputs\\bitmap\\test_bitmap.bin";
-            //tFilename.Text = "C:\\Users\\Alex\\Documents\\Lattice\\test\\hx1k_test\\hx1k_test_Implmnt\\sbt\\outputs\\bitmap\\test_bitmap.bin";
-            tFilename.Text = "C:\\Users\\Alex\\Documents\\Lattice\\test\\hx1k_dim6\\hx1k_test_Implmnt\\sbt\\outputs\\bitmap\\test_bitmap.bin";
             OnStateChanged(false);
             UpdateState();
 
@@ -90,34 +85,6 @@ namespace LatticeProg
 
             lStatus.Text = Prog.Status;
             pbProgress.Value = Convert.ToInt32(pbProgress.Maximum * Prog.Progress / 100);
-
-            if (!Prog.Busy)
-            {
-               // byte V = Convert.ToByte(tbValue.Value & 0xFF);
-                //byte V = Convert.ToByte(Value & 0xFF);
-                // Value += 0x01;
-                int Val = PWMTable[tbValue.Value & 0xFF];
-
-                byte HB = Convert.ToByte((Val >> 16) & 0xFF);
-                byte MB = Convert.ToByte((Val >> 8) & 0xFF);
-                byte LB = Convert.ToByte((Val) & 0xFF);
-
-                Prog.P.Control(new byte[] { HB, MB, LB,
-                                            HB, MB, LB,
-                                            HB, MB, LB,
-                                            HB, MB, LB,
-                                            HB, MB, LB,
-                                            HB, MB, LB,
-                                            HB, MB, LB,
-                                            HB, MB, LB,
-                                            HB, MB, LB,
-                                            HB, MB, LB,
-                                            HB, MB, LB,
-                                            HB, MB, LB,
-                                            HB, MB, LB,
-                                            HB, MB, LB,
-                                            HB, MB, LB });
-            }
         }
 
         private void bLoad_Click(object sender, EventArgs e)
@@ -144,11 +111,6 @@ namespace LatticeProg
 
                 Prog.Program(Bitmap);
             }
-        }
-
-        private void bTest_Click(object sender, EventArgs e)
-        {
-            Prog.P.Control(new byte[] { 0x90, 0x90, 0x90, 0x90, 0x90, 0x90 });
         }
 
         private void bCancel_Click(object sender, EventArgs e)

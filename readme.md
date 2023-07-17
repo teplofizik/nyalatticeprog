@@ -35,3 +35,13 @@ Pinout:
 | PB1 | CRST  |
 | PB2 | CDONE |
 | PA9 | LED   |
+
+## Loading algo for iCE40
+1. CS set low.
+2. CRST set low.
+3. Wait CDONE goes low.
+4. CRST set high.
+5. Wait some time (FPGA loading).
+6. Send bitstream via SPI (8 bits MSP, Mode=0), ~70 kbytes, 80 bytes header included.
+7. Periodically send 0xFF and wait CDONE goes high.
+8. After CDONE goes high send 49 clock pulses (7 bytes) and set CS high.
