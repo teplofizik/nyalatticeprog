@@ -22,7 +22,7 @@ Pinout:
 | PB2 | CDONE |
 | PE8 | LED   |
 
-2. [STM32F303 + ice5 Development Board](http://ebrombaugh.studionebula.com/embedded/f303_ice5/)
+2. [STM32F303 + ice5 Development Board](https://blog.oshpark.com/2016/07/05/stm32f303-ice5-development-board/)
 
 ![STM32F303 + ice5 Development Board photo](assets/ice5devboard.png)
 
