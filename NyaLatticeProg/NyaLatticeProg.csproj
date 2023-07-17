@@ -7,8 +7,8 @@
     <ProjectGuid>{9BE9D6D4-7400-4681-A4F7-A3AF6A367E41}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LatticeProg</RootNamespace>
-    <AssemblyName>LatticeProg</AssemblyName>
+    <RootNamespace>NyaLatticeProg</RootNamespace>
+    <AssemblyName>NyaLatticeProg</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -87,6 +87,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

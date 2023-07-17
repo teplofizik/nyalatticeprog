@@ -1,4 +1,4 @@
-﻿namespace LatticeProg
+﻿namespace NyaLatticeProg
 {
     partial class fMain
     {
